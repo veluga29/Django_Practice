@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 최상위 프로젝트 폴더 의미
 
 
 # Quick-start development settings - unsuitable for production
@@ -120,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 최상위 폴더의 하위 폴더 media에 파일을 저장
+# MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'public', 'media')  # 파일을 소스코드 바깥에 두고 싶다면 이런 방식도 존재
